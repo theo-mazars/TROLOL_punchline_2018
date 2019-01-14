@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2019
+** TROLOL PROJECT, 2018
 ** TROLOL_punchline_2018
 ** File description:
 ** main
