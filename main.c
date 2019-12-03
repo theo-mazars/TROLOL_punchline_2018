@@ -10,26 +10,24 @@
 
 int main(void)
 {
-    WINDOW *boite;
+    WINDOW *box;
     char *str = "punch ";
-    char *new_str;
-    int i;
+    char *new_str = malloc(1);
 
     initscr();
     while (1) {
         refresh();
         clear();
         free(new_str);
-        new_str = malloc(sizeof(char) * COLS);
-        for (i= 0; i < COLS; i++)
+        new_str = calloc(COLS, sizeof(char));
+        for (int i = 0; i < COLS; i++)
             new_str[i] = str[i % 6];
-        new_str[i] = 0;
         mvprintw(LINES / 2, 0, new_str);
         if (getch() != 410)
             return (0);
     }
     getch();
     endwin();
-    free(boite);
+    free(box);
     return (0);
 }
